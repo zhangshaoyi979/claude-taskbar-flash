@@ -31,7 +31,7 @@
 ### 2. 安装插件
 
 ```
-/plugin install taskbar-flash@zhangshaoyi979-taskbar-flash
+/plugin install taskbar-flash@claude-taskbar-flash
 ```
 
 ### 3. 运行配置
