@@ -60,7 +60,7 @@
         "matcher": "AskUserQuestion",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }
@@ -70,7 +70,7 @@
         "matcher": "",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }
@@ -80,7 +80,7 @@
         "matcher": "",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }

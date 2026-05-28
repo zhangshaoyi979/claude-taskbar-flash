@@ -53,7 +53,7 @@ Read `~/.claude/settings.json`. Merge the following hooks into the `"hooks"` key
         "matcher": "AskUserQuestion",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }
@@ -63,7 +63,7 @@ Read `~/.claude/settings.json`. Merge the following hooks into the `"hooks"` key
         "matcher": "",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }
@@ -73,7 +73,7 @@ Read `~/.claude/settings.json`. Merge the following hooks into the `"hooks"` key
         "matcher": "",
         "hooks": [{
           "type": "command",
-          "command": "powershell -ExecutionPolicy Bypass -File \"$HOME/.claude/flash-taskbar.ps1\"",
+          "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path (Resolve-Path ~) '.claude\\flash-taskbar.ps1')\"",
           "async": true
         }]
       }
