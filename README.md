@@ -22,7 +22,7 @@
 
 ## 快速安装
 
-### 1. 添加市场源（仅首次）
+### 1. 添加市场源
 
 ```
 /plugin marketplace add zhangshaoyi979/claude-taskbar-flash
@@ -40,14 +40,17 @@
 /taskbar-flash
 ```
 
-### 4. 重启 Claude Code
-
-退出并重新启动 Claude Code（关闭终端再打开，或 `Ctrl+C` 后重新运行 `claude`）。
 
 ## 更新 / 卸载
 
-- **更新脚本**：运行 `/taskbar-flash`，然后说 "update" 或 "更新"
-- **卸载插件**：运行 `/taskbar-flash`，然后说 "uninstall" 或 "卸载"
+- **更新脚本**：运行
+ ```
+/taskbar-flash update
+```
+- **卸载插件**：运行 
+```
+/taskbar-flash uninstall
+```
 
 ## 手动安装（不使用插件）
 
