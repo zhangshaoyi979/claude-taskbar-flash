@@ -17,6 +17,14 @@ This skill manages Claude Code taskbar flashing for Windows. Supports three oper
 
 When asked to set up taskbar flash, follow these steps:
 
+### Step 0: Check if already configured
+
+Check if `~/.claude/flash-taskbar.ps1` exists AND `~/.claude/settings.json` contains the three hooks (PreToolUse with AskUserQuestion matcher, PermissionRequest, Stop) referencing `flash-taskbar.ps1`.
+
+If already fully configured, tell the user: "任务栏闪烁已配置，无需重复安装。如需更新脚本请说 'update'，如需卸载请说 'uninstall'。" Stop here — do not proceed to Step 1.
+
+If the script exists but some hooks are missing, proceed to Step 1 and repair the missing hooks.
+
 ### Step 1: Detect OS
 
 Run `echo "$OSTYPE"` (bash) or check if Windows. **Windows only** for now. On macOS/Linux, say "macOS/Linux 暂不支持，目前仅支持 Windows。"
