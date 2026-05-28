@@ -36,7 +36,9 @@
 
 ### 3. 运行配置
 
-输入 **`/taskbar-flash`**，Claude 会自动完成配置。
+```
+/taskbar-flash
+```
 
 ### 4. 重启 Claude Code
 
@@ -44,8 +46,8 @@
 
 ## 更新 / 卸载
 
-- **更新脚本**：输入 **`/taskbar-flash`**，然后说 "update" 或 "更新"
-- **卸载插件**：输入 **`/taskbar-flash`**，然后说 "uninstall" 或 "卸载"
+- **更新脚本**：运行 `/taskbar-flash`，然后说 "update" 或 "更新"
+- **卸载插件**：运行 `/taskbar-flash`，然后说 "uninstall" 或 "卸载"
 
 ## 手动安装（不使用插件）
 
