@@ -1,0 +1,9 @@
+{
+  "name": "taskbar-flash",
+  "description": "Flash Windows taskbar when Claude needs your attention — permission prompts, questions, and task completion. macOS/Linux support planned.",
+  "version": "1.0.0",
+  "author": { "name": "zsy" },
+  "license": "MIT",
+  "keywords": ["windows", "notification", "taskbar", "flash", "attention"],
+  "skills": ["./skills/taskbar-flash"]
+}
