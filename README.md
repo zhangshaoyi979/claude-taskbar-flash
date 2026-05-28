@@ -42,6 +42,11 @@
 
 按 `Ctrl+C` 退出，重新运行 `claude`。
 
+## 更新 / 卸载
+
+- **更新脚本**：输入 **`/taskbar-flash`**，然后说 "update" 或 "更新"
+- **卸载插件**：输入 **`/taskbar-flash`**，然后说 "uninstall" 或 "卸载"
+
 ## 手动安装（不使用插件）
 
 1. 复制 `skills/taskbar-flash/scripts/flash-taskbar.ps1` 到 `~/.claude/`
@@ -91,7 +96,9 @@
 
 ## 卸载
 
-从 `~/.claude/settings.json` 中移除 hooks 配置，并删除 `~/.claude/flash-taskbar.ps1`。
+**使用插件卸载**：输入 `/taskbar-flash`，然后说 "uninstall" 或 "卸载"，Claude 会自动清理。
+
+**手动卸载**：从 `~/.claude/settings.json` 中移除 hooks 配置，并删除 `~/.claude/flash-taskbar.ps1`。
 
 ## 原理
 
