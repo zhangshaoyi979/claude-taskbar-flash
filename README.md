@@ -40,7 +40,7 @@
 
 ### 4. 重启 Claude Code
 
-按 `Ctrl+C` 退出，重新运行 `claude`。
+退出并重新启动 Claude Code（关闭终端再打开，或 `Ctrl+C` 后重新运行 `claude`）。
 
 ## 更新 / 卸载
 
