@@ -1,4 +1,4 @@
-# Claude Code 任务栏闪烁
+# Claude Code Notifications
 
 当 Claude Code 需要你关注时（弹出选项、权限请求、任务完成），让 Windows 任务栏图标闪烁提醒。
 
