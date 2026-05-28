@@ -99,17 +99,38 @@ Tell the user:
 
 ## Operation: Update
 
-When the user asks to update the taskbar flash script:
+When the user asks to update the taskbar flash script, you MUST do ALL of the following steps. Do NOT skip any step.
 
-1. Check OS — Windows only.
-2. Copy the latest script from `<plugin_root>/skills/taskbar-flash/scripts/flash-taskbar.ps1` to `~/.claude/flash-taskbar.ps1`, overwriting the old one.
-3. Read `~/.claude/settings.json` and verify the three hooks (PreToolUse/AskUserQuestion, PermissionRequest, Stop) and the `Bash(powershell *)` permission still exist. If any are missing, re-add them with the command below. **Also check for outdated hook commands** — if any hook command contains `$HOME/.claude/flash-taskbar.ps1` (the old format), replace it with the new command below.
+### Step 1: Detect OS
 
-   **Current hook command:**
-   ```
-   powershell -NoProfile -ExecutionPolicy Bypass -Command "& (Join-Path (Resolve-Path ~) '.claude\flash-taskbar.ps1')"
-   ```
-4. Tell the user: "脚本已更新到最新版本。如果 hook 命令有更新，重启 Claude Code 后生效。"
+Windows only. On macOS/Linux say "暂仅支持 Windows。"
+
+### Step 2: Copy the latest script
+
+Copy from `<plugin_root>/skills/taskbar-flash/scripts/flash-taskbar.ps1` to `~/.claude/flash-taskbar.ps1`, overwriting.
+
+### Step 3: MANDATORY — Scan for and replace outdated hook commands
+
+Read `~/.claude/settings.json`. Search the entire file for the string `$HOME/.claude/flash-taskbar.ps1` (the old/broken command format).
+
+**If found:** You MUST replace EVERY occurrence of the old command:
+```
+powershell -ExecutionPolicy Bypass -File "$HOME/.claude/flash-taskbar.ps1"
+```
+with the current command:
+```
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& (Join-Path (Resolve-Path ~) '.claude\flash-taskbar.ps1')"
+```
+
+This is the most important step. The old `$HOME` format does NOT work for CMD users. Do NOT skip this replacement.
+
+### Step 4: Verify hooks and permission exist
+
+Check that the three hook entries (PreToolUse/AskUserQuestion, PermissionRequest, Stop) and `Bash(powershell *)` permission exist. If any are missing, add them.
+
+### Step 5: Confirm
+
+Tell the user: "更新完成。脚本已替换；hook 命令已更新为兼容格式；无需重启，下次触发自动生效。"
 
 ## Operation: Uninstall
 
