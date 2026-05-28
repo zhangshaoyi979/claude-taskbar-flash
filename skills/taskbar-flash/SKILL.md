@@ -103,8 +103,13 @@ When the user asks to update the taskbar flash script:
 
 1. Check OS — Windows only.
 2. Copy the latest script from `<plugin_root>/skills/taskbar-flash/scripts/flash-taskbar.ps1` to `~/.claude/flash-taskbar.ps1`, overwriting the old one.
-3. Read `~/.claude/settings.json` and verify the three hooks (PreToolUse/AskUserQuestion, PermissionRequest, Stop) and the `Bash(powershell *)` permission still exist. If any are missing, re-add them.
-4. Tell the user: "脚本已更新到最新版本，无需重启，下次触发时自动生效。"
+3. Read `~/.claude/settings.json` and verify the three hooks (PreToolUse/AskUserQuestion, PermissionRequest, Stop) and the `Bash(powershell *)` permission still exist. If any are missing, re-add them with the command below. **Also check for outdated hook commands** — if any hook command contains `$HOME/.claude/flash-taskbar.ps1` (the old format), replace it with the new command below.
+
+   **Current hook command:**
+   ```
+   powershell -NoProfile -ExecutionPolicy Bypass -Command "& (Join-Path (Resolve-Path ~) '.claude\flash-taskbar.ps1')"
+   ```
+4. Tell the user: "脚本已更新到最新版本。如果 hook 命令有更新，重启 Claude Code 后生效。"
 
 ## Operation: Uninstall
 
