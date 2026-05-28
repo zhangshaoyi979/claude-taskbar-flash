@@ -1,0 +1,16 @@
+{
+  "name": "claude-taskbar-flash",
+  "id": "zhangshaoyi979-taskbar-flash",
+  "owner": { "name": "zhangshaoyi979" },
+  "metadata": { "description": "Flash Windows taskbar when Claude Code needs your attention" },
+  "plugins": [
+    {
+      "name": "taskbar-flash",
+      "source": "./",
+      "description": "Flash Windows taskbar when Claude needs your attention — permission prompts, questions, and task completion. 3 flashes then stays highlighted until you switch back.",
+      "version": "1.0.0",
+      "author": { "name": "zhangshaoyi979" },
+      "keywords": ["windows", "notification", "taskbar", "flash", "attention"]
+    }
+  ]
+}
