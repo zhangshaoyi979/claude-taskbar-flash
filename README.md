@@ -16,7 +16,7 @@
 
 | 平台 | 状态 |
 |----------|--------|
-| Windows (Windows Terminal) | 已支持 |
+| Windows (Windows Terminal/ IDE) | 已支持 |
 | macOS | 计划中 |
 | Linux | 计划中 |
 
