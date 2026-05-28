@@ -36,7 +36,7 @@
 
 ### 3. 运行配置
 
-直接说：**"setup taskbar flash"**，Claude 会自动完成配置。
+输入 **`/taskbar-flash`**，Claude 会自动完成配置。
 
 ### 4. 重启 Claude Code
 

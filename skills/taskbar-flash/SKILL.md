@@ -12,7 +12,7 @@ This skill configures Claude Code to flash the Windows taskbar when:
 
 ## Usage
 
-Just say "setup taskbar flash" or "configure taskbar notification" — Claude will follow this guide automatically.
+Type **`/taskbar-flash`** or say "setup taskbar flash" — Claude will follow this guide automatically.
 
 ## Setup Instructions for Claude
 
